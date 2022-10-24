@@ -1,0 +1,4 @@
+tensorflow
+torch
+ray[default, tune, rllib]
+opencv-python
