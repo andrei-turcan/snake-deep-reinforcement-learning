@@ -10,7 +10,7 @@
 
 This is a
 simple [deep reinforcement learning](https://en.wikipedia.org/wiki/Deep_reinforcement_learning)
-project. The project implemented
+project. The project implements
 the [Snake game](https://en.wikipedia.org/wiki/Snake_(video_game_genre)) as
 an [OpenAI Gym environment](https://www.gymlibrary.dev/). Deep learning is implemented using
 the [RLlib library](https://docs.ray.io/en/latest/rllib/index.html).
