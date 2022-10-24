@@ -2,6 +2,10 @@ import cv2
 
 RANDOM_SEED = 42
 
+MAX_STEPS = 100000
+
+CHECKPOINT_FREQ = 100
+
 ENV_CONFIG = {
   'show': False,
   'render_delay': 0,
@@ -13,10 +17,26 @@ ENV_CONFIG = {
   'move_reward': 0,
 }
 
-TRAIN_CONFIG = {
-  'num_gpus': 0,
+CONFIG = {
+  'env': 'snake_env',
+  'num_gpus': 1,
   'num_workers': 1,
-  'max_steps': 2000000,
-  'train_batch_size': 32,
-  'checkpoint_freq': 50
+  'framework': 'torch',
+  'seed': RANDOM_SEED,
+  'env_config': ENV_CONFIG,
+  'model': {
+    'conv_filters': [
+      [16, 8, 4],
+      [32, 4, 2],
+      [64, 3, 1],
+      [64, 3, 1],
+      [64, 3, 1],
+      [64, 3, 1],
+      [64, 3, 1],
+      [128, 12, 1],
+    ],
+    'fcnet_hiddens': [128]
+  },
+  'hiddens': [128],
+  'train_batch_size': 32
 }
